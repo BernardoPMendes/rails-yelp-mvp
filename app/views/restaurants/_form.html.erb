@@ -1,0 +1,20 @@
+<div class="container w-25 mt-5">
+
+  <%= form_with model: restaurant do |f| %>
+    <div class="">
+      <p class="border p-2 text-center"> <%= f.label :name %>
+      <%= f.text_field :name %> </p>
+    </div>
+    <div class="">
+      <p class="border p-2 text-center"> <%= f.label :address %>
+      <%= f.text_field :address %> </p>
+    </div>
+
+    <div class="">
+    <p class="border p-2 text-center"> <%= f.label :category %>
+    <%= f.select :category, ["chinese", "italian", "japanese", "french", "belgian"]%> </p>
+    </div>
+
+    <p><%= f.submit class: "btn btn-outline-secondary btn-sm" %></p>
+  <% end %>
+</div>
